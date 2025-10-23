@@ -31,8 +31,19 @@ if uploaded_file is not None:
     img_array = img_array / 255.0  # normalize if your model was trained with normalized images
 
     # Predict
-    prediction = model.predict(img_array)
-    predicted_class = np.argmax(prediction, axis=1)
+  
+
+    pred_probs = model.predict(img_array)
+
+    # Get predicted class
+    pred_class = np.argmax(pred_probs, axis=1)[0]
+
+    # Map to class label if you have class_names
+    class_names = ['airplane','automobile','bird','cat','deer','dog','frog','horse','ship','truck']
+    max_class = class_names[np.argmax(pred_probs[0])]
+    max_prob = np.max(pred_probs[0]) * 100
+    print(f"Predicted: {max_class} ({max_prob:.2f}%)")
+    pred_label = class_names[pred_class]
 
     # Display result
-    st.write(f"Predicted Class: {predicted_class[0]}")
+    st.write(f"Predicted Class: {pred_label}")
