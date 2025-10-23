@@ -12,6 +12,9 @@ def load_cnn_model():
 
 model = load_cnn_model()
 
+# with open("index.html", "r") as file:
+#     html_content = file.read()
+# st.markdown(html_content, unsafe_allow_html=True)
 # Title
 st.title("CNN Image Classification App")
 st.write("Upload an image and let the model predict its class!")
@@ -21,8 +24,8 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png
 
 if uploaded_file is not None:
     # Display the uploaded image
-    img = Image.open(uploaded_file)
-    st.image(img, caption='Uploaded Image', use_column_width=True)
+    img = Image.open(uploaded_file).convert("RGB")
+    st.image(img, caption='Uploaded Image', use_container_width=True)
 
     # Preprocess the image
     img = img.resize((32, 32))  # replace with your model input size
@@ -46,4 +49,4 @@ if uploaded_file is not None:
     pred_label = class_names[pred_class]
 
     # Display result
-    st.write(f"Predicted Class: {pred_label}")
+    st.write(f"Predicted Class: {pred_label} accuracy:{max_prob}")
