@@ -33,18 +33,25 @@ Install the necessary dependencies using:
 ```bash
 pip install -r requirements.txt
 
-##📈 Results & Visualization
+```
 
+##📈 Results & Visualization
+```
 Loss and Accuracy Curves
 
 Feature Maps (via CNN visualization)
 
 Grad-CAM Heatmaps (optional)
+```
+
 
 ##💾 Saving and Loading the Model
+
+```
 # Save
 model.save("models/cnn_trained_model.h5")
 
 # Load
 from tensorflow.keras.models import load_model
 model = load_model("models/cnn_trained_model.h5")
+```
