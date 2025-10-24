@@ -4,7 +4,7 @@
 This project implements an **Image Classifier** using a **Convolutional Neural Network (CNN)** built with TensorFlow/Keras.  
 The model is trained to classify images into multiple categories and includes features such as **Batch Normalization**, **Dropout Regularization**, and **Global Average Pooling** for improved performance and generalization.
 
-**Live Demo:  **https://g1-project-classifier.streamlit.app
+**Live Demo:  https://g1-project-classifier.streamlit.app
 ---
 ## 🚀 Project Overview
 
