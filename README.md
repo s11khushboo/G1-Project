@@ -1,17 +1,21 @@
-# G1-Project
+# G1- Image Classifier
 # Image Classification with Convolutional Neural Networks (CNN)
 
-This project implements an **Image Classifier** using a **Convolutional Neural Network (CNN)** built with TensorFlow/Keras.  
-The model is trained to classify images into multiple categories and includes features such as **Batch Normalization**, **Dropout Regularization**, and **Global Average Pooling** for improved performance and generalization.
+Live Demo: 
 
-Live Demo:  https://g1-project-classifier.streamlit.app
+https://g1-project-classifier.streamlit.app 
+https://maleckicoa.com/demo-apps/
+
 ---
 ## 🚀 Project Overview
 
-- **Objective:** Train a CNN to classify images into predefined categories.
+This project implements an **Image Classifier** using a **Convolutional Neural Network (CNN)** built with TensorFlow/Keras.  
+The project hosts two models: a custom CNN model and a Transfer Learning CNN model
+
+- **Objective:** Classify images into predefined categories.
 - **Framework:** TensorFlow / Keras
-- **Model Type:** Deep Convolutional Neural Network (Custom)
-- **Dataset:** Any image dataset (e.g., CIFAR-10, custom dataset)
+- **Model Type:** Deep Convolutional Neural Network (Custom) + Transfer Learning Model
+- **Dataset:** CIFAR-10
 - **Key Features:**
   - Multi-layer CNN with increasing filter complexity
   - Batch Normalization for stable learning
@@ -20,6 +24,28 @@ Live Demo:  https://g1-project-classifier.streamlit.app
   - Trained model saved for reuse/inference
 
 ---
+## 🧩 Folder Structure
+
+Cnn_model- contains a trained model and a notebook with model specification
+tl model- contains a transfer learning  link in a text file to 
+        - T
+
+---
+
+## ⚙️ Requirements
+
+Install the necessary dependencies using:
+
+pip install -r requirements.txt
+
+---
+
+## 🧩 Model Architecture
+
+  The CNN model consists of multiple convolutional blocks followed by a dense classifier:
+
+---
+
 
 ## 💾 Saving and Loading the Model
 
@@ -34,20 +60,6 @@ Live Demo:  https://g1-project-classifier.streamlit.app
   model = load_model("cnn_model/ic_cnn_model.keras")
   
   
----
-
-## 🧩 Model Architecture
-
-  The CNN model consists of multiple convolutional blocks followed by a dense classifier:
-
----
-
-## ⚙️ Requirements
-
-Install the necessary dependencies using:
-
-pip install -r requirements.txt
-
 ---
 ## 📊 Evaluation
 
