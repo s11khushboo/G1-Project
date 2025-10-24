@@ -1,7 +1,7 @@
 # G1- Image Classifier
 # Image Classification with Convolutional Neural Networks (CNN)
 
-Live Demo: 
+Live Demos: 
 
 https://g1-project-classifier.streamlit.app 
 https://maleckicoa.com/demo-apps/
@@ -14,7 +14,7 @@ The project hosts two models: a custom CNN model and a Transfer Learning CNN mod
 
 - **Objective:** Classify images into predefined categories.
 - **Framework:** TensorFlow / Keras
-- **Model Type:** Deep Convolutional Neural Network (Custom) + Transfer Learning Model
+- **Model Type:** Deep Convolutional Neural Network (Custom) & Transfer Learning Model
 - **Dataset:** CIFAR-10
 - **Key Features:**
   - Multi-layer CNN with increasing filter complexity
@@ -26,60 +26,53 @@ The project hosts two models: a custom CNN model and a Transfer Learning CNN mod
 ---
 ## 🧩 Folder Structure
 
-Cnn_model- contains a trained model and a notebook with model specification
-tl model- contains a transfer learning  link in a text file to 
-        - T
+Cnn_model- contains a trained custom Keras CNN model and a IPYNB notebook with a specification on how to train the model
+tl model- contains a text file with a link to the Keras Transfer learning CNN model
+experiment_model - Contains various model versions that were made/trained during the development
 
 ---
 
 ## ⚙️ Requirements
 
 Install the necessary dependencies using:
-
 pip install -r requirements.txt
 
 ---
 
 ## 🧩 Model Architecture
 
-  The CNN model consists of multiple convolutional blocks followed by a dense classifier:
+  The Custom CNN model: 
+      - consists of multiple convolutional blocks followed by a dense classifier (see: cnn_model/image_classifier_cnn.ipynb)
+      
+  The Transfer Learning model: 
+      - Base model is MobileNetV2 followed with a few custom AvgPooling and Dense layers ( see: tl_model/CIFAR-10- Transfer Learning Winner Model.ipynb )
 
 ---
 
 
-## 💾 Saving and Loading the Model
+## 💾 How to run the models
 
-  ### Save
+  ### Approch 1
   
-  model.save("models/cnn_trained_model.h5")
+  run the `model.predict` method on preprocessed images 
+  (see: cnn_model/image_classifier_cnn.ipynb &  tl_model/CIFAR-10- Transfer Learning Winner Model.ipynb )
+  
 
-  ### Load
+  ### Approach 2
   
-  from tensorflow.keras.models import load_model
-  
-  model = load_model("cnn_model/ic_cnn_model.keras")
+  Feed a raw image into the Web application
+  (https://g1-project-classifier.streamlit.app 
+  https://maleckicoa.com/demo-apps/)
   
   
 ---
-## 📊 Evaluation
+## 📊 Model Results
 
-Results include:
-
-Accuracy
-
-Loss
-
-Confusion Matrix
-
-Classification Report
-
----
-
-## 📈 Results & Visualization
-
-Loss and Accuracy Curves
-
-Feature Maps (via CNN visualization)
-
-
----
+  ### Approch 1
+  
+  The model results from the IPYNB notebooks include: Accuracy, Loss, Confusion Matrix, Classification Report and performance visualisations
+  
+  ### Approach 2
+  
+  For a given image, the Web application returns the image class with a probability
+    
