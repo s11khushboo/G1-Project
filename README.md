@@ -24,16 +24,18 @@ Live Demo:  https://g1-project-classifier.streamlit.app
 ## 💾 Saving and Loading the Model
 
   # Save
+  
   model.save("models/cnn_trained_model.h5")
 
   # Load
+  
   from tensorflow.keras.models import load_model
   model = load_model("models/cnn_trained_model.h5")
 ---
 
 ## 🧩 Model Architecture
 
-  The CNN model consists of multiple convolutional blocks followed by a dense classifier:
+The CNN model consists of multiple convolutional blocks followed by a dense classifier:
 
 ---
 
