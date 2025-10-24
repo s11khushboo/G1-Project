@@ -41,6 +41,20 @@ Install the necessary dependencies using:
 pip install -r requirements.txt
 
 ---
+## 📊 Evaluation
+python evaluate.py --data path/to/testset --model saved_model.h5
+
+Results include:
+
+Accuracy
+
+Loss
+
+Confusion Matrix
+
+Classification Report
+
+---
 ##📈 **Results & Visualization**
 
 Loss and Accuracy Curves
