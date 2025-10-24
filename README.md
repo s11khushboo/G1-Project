@@ -23,11 +23,11 @@ Live Demo:  https://g1-project-classifier.streamlit.app
 
 ## 💾 Saving and Loading the Model
 
-  # Save
+  ### Save
   
   model.save("models/cnn_trained_model.h5")
 
-  # Load
+  ### Load
   
   from tensorflow.keras.models import load_model
   model = load_model("models/cnn_trained_model.h5")
