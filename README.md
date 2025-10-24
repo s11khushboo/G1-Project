@@ -50,7 +50,6 @@ pip install -r requirements.txt
 
 ---
 ## 📊 Evaluation
-python evaluate.py --data path/to/testset --model saved_model.h5
 
 Results include:
 
@@ -70,6 +69,5 @@ Loss and Accuracy Curves
 
 Feature Maps (via CNN visualization)
 
-Grad-CAM Heatmaps (optional)
 
 ---
