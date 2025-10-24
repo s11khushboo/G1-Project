@@ -30,7 +30,10 @@ Live Demo:  https://g1-project-classifier.streamlit.app
   ### Load
   
   from tensorflow.keras.models import load_model
-  model = load_model("models/cnn_trained_model.h5")
+  
+  model = load_model("cnn_model/ic_cnn_model.keras")
+  
+  
 ---
 
 ## 🧩 Model Architecture
