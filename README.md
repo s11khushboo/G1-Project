@@ -35,7 +35,7 @@ Live Demo:  https://g1-project-classifier.streamlit.app
 
 ## 🧩 Model Architecture
 
-The CNN model consists of multiple convolutional blocks followed by a dense classifier:
+  The CNN model consists of multiple convolutional blocks followed by a dense classifier:
 
 ---
 
